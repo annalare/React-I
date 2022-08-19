@@ -1,24 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import Header from "./components/Header";
+import Box from "./components/Box";
+import Banner from "./assets/images/ilustra-banner.png";
+import "./styles/global.css";
 function App() {
+  const sendEmail = () => {
+    alert("Email enviado com sucesso");
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <main>
+        <Box background="claro">
+          <div>
+            <div>
+              <h1> Educação Financeira é tudo de bom</h1>
+              <p> Vem comigo que te mostro por onde começar</p>
+              <button className="button" onClick={sendEmail}>
+                Quero saber mais{" "}
+              </button>
+            </div>
+            <div>
+              <img src={Banner} alt="banner" />
+            </div>
+          </div>
+        </Box>
+        <Box background="escuro">
+          <p> teste</p>
+        </Box>
+      </main>
     </div>
   );
 }
