@@ -4,14 +4,16 @@ import Logo from "../../assets/images/logo-header.png";
 function Header() {
   return (
     <header>
-      <img src={Logo} alt="Logo do dindin" />
+      <div>
+        <img src={Logo} alt="Logo do dindin" />
 
-      <nav>
-        <Link texto="Cursos" redirect="/cursos" />
+        <nav>
+          <Link texto="Cursos" redirect="/cursos" />
 
-        <Link texto="Blog" redirect="/contato" />
-        <Link texto="Contato" redirect="/cursos" />
-      </nav>
+          <Link texto="Blog" redirect="/contato" />
+          <Link texto="Contato" redirect="/cursos" />
+        </nav>
+      </div>
     </header>
   );
 }

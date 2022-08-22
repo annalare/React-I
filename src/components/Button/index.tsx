@@ -1,11 +1,14 @@
+import "./styles.css";
+
 interface IProps {
-  sendEmail: () => void;
+  sendEmail?: () => void;
+  children?: string;
 }
 
 function Button(props: IProps) {
   return (
     <button className="button" onClick={props.sendEmail}>
-      Quero saber mais
+      {props.children}
     </button>
   );
 }

@@ -1,5 +1,5 @@
 import "./styles.css";
-
+import { Link as LinkRoute } from "react-router-dom";
 interface LinkProps {
   texto: string;
   redirect: string;
@@ -7,13 +7,8 @@ interface LinkProps {
 
 export default function Link(props: LinkProps) {
   return (
-    <a
-      className="links-menu"
-      href={props.redirect}
-      target="_blank"
-      rel="noreferrer"
-    >
+    <LinkRoute className="links-menu" to={props.redirect}>
       {props.texto}
-    </a>
+    </LinkRoute>
   );
 }
