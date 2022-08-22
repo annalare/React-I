@@ -1,10 +1,11 @@
-import Link from "../Link";
 import "./styles.css";
-import Logo from "../../assets/images/logo-header.png";
-function Header() {
+import Link from "../Link";
+import LogoFooter from "../../assets/images/logo.png";
+
+function Footer() {
   return (
-    <header>
-      <img src={Logo} alt="Logo do dindin" />
+    <footer>
+      <img src={LogoFooter} alt="Logo do dindin" />
 
       <nav>
         <Link texto="Cursos" redirect="/cursos" />
@@ -12,7 +13,7 @@ function Header() {
         <Link texto="Blog" redirect="/contato" />
         <Link texto="Contato" redirect="/cursos" />
       </nav>
-    </header>
+    </footer>
   );
 }
-export default Header;
+export default Footer;
